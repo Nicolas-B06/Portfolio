@@ -11,7 +11,7 @@ const About: React.FC = () => {
         <h1 className="text-white font-semibold text-4xl sm:text-6xl text-center mb-4">
           À PROPOS DE MOI
         </h1>
-        <p className="tracking-[0.5em] font-light text-[var(--accent)] text-md sm:text-xl text-center mb-4">
+        <p className="tracking-[0.5em] font-light text-[var(--accent)] text-md sm:text-xl text-center mb-10">
           DECOUVREZ MON PARCOURS
         </p>
         <p className="text-gray-300 text-justify text-sm sm:text-md leading-relaxed">

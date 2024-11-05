@@ -78,8 +78,8 @@ const Experience: React.FC = () => {
               src="/logo-blanc-grand-probtp.png"
               height={100}
               width={100}
-              alt="experience"
-              className="rounded-full"
+              alt="logo blanc pro btp"
+              
             />
             <p className="text-gray-300 text-center md:text-left">
               Assistant en <span className="font-semibold">stratégie IT</span>
@@ -106,7 +106,7 @@ const Experience: React.FC = () => {
               src="/NS.jpg"
               height={50}
               width={50}
-              alt="experience"
+              alt="logo blanc nesxtsourcia"
               className="rounded-full"
             />
             <p className="text-gray-300 text-center md:text-left">
@@ -115,7 +115,7 @@ const Experience: React.FC = () => {
             </p>
           </div>
           <p className="text-gray-300 text-center md:text-left md:pt-0 pt-3">
-            Mai 2023 - Septembre 2024
+            Novembre 2021 - Mai 2023
           </p>
         </div>
         <p className="text-gray-300 pt-5 text-justify text-sm sm:text-md leading-relaxed">
@@ -131,6 +131,40 @@ const Experience: React.FC = () => {
         </p>
         <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-5">
           {["React", "TypeScript", "JavaScript", "NodeJs"].map((tech, idx) => (
+            <div key={idx} className="flex items-center">
+              {links.find((link) => link.title === tech)?.icon}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="container mx-auto mb-10 max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="md:flex md:justify-between items-center pt-5">
+          <div className="flex items-center gap-3 justify-center md:justify-start">
+            <Image
+              src="/O'clock.jpg"
+              height={50}
+              width={50}
+              alt="logo o'clock"
+              className="rounded-full"
+            />
+            <p className="text-gray-300 text-center md:text-left">
+              Formation <span className="font-semibold">Développeur Web</span> - O'clock
+            </p>
+          </div>
+          <p className="text-gray-300 text-center md:text-left md:pt-0 pt-3">
+            Décembre 2020 - Mai 2021
+          </p>
+        </div>
+        <p className="text-gray-300 pt-5 text-justify text-sm sm:text-md leading-relaxed">
+          Formation intensive de 6 mois en développement web full stack, avec une spécialisation backend en Node.js.
+          J'ai obtenu le titre RNCP Niveau 5 de "Développeur Web et Web Mobile" après cette formation.
+          <br /><br />
+          <span className="font-semibold">Projet de fin de formation : Wishlist</span> - Une application permettant de créer et de gérer
+          des listes d’articles provenant de sites marchands. Ce projet a été réalisé en utilisant des technologies comme React, Express (Node.js),
+          et PostgreSQL, déployé sur Heroku et Vercel.
+        </p>
+        <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-5">
+          {["React", "NodeJs", "JavaScript"].map((tech, idx) => (
             <div key={idx} className="flex items-center">
               {links.find((link) => link.title === tech)?.icon}
             </div>
