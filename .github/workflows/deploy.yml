@@ -1,39 +1,35 @@
-name: Deploy to Vercel
-
+name: Vercel development Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-
 jobs:
-  deploy:
+  Deploy-development:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+
+      - name: Install npm
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install  
 
-      - name: Debug Secrets
-        run: |
-          if [ -z "$VERCEL_PROJECT_ID" ]; then echo "VERCEL_PROJECT_ID is missing"; else echo "VERCEL_PROJECT_ID is set"; fi
-          if [ -z "$VERCEL_ORG_ID" ]; then echo "VERCEL_ORG_ID is missing"; else echo "VERCEL_ORG_ID is set"; fi
-          if [ -z "$VERCEL_TOKEN" ]; then echo "VERCEL_TOKEN is missing"; else echo "VERCEL_TOKEN is set"; fi
-
-      - name: Deploy to Vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          npx vercel --prod --token $VERCEL_TOKEN --yes
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+   
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel  
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
