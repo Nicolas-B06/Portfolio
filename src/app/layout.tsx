@@ -6,24 +6,33 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nicolasbernard.com/"),
+  metadataBase: new URL("https://portfolio-bernard-nicolas.vercel.app"),
   title: "Nicolas BERNARD - Developer Portfolio",
   description:
-    "Developer Portfolio of Fullstack & Mobile App Develope",
+    "Developer Portfolio of Fullstack & Mobile App Developer Nicolas BERNARD.",
   keywords: [
     "Developer",
     "Portfolio",
     "Developer Portflio",
-    "Ibrahim Memon",
+    "Fullstack Developer",
     "Next.js",
     "React",
     "ReactNative",
-    "Android",
+    "NodeJS",
+    "Express",
+    "MongoDB",
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "SASS",
+    "TailwindCSS",
+    "Nicolas BERNARD",
   ],
   openGraph: {
     title: "Nicolas BERNARD",
     description:
-      "Frontend & Mobile App Developer JavaScript technologies.",
+      "Fullstack & Mobile Developer JavaScript technologies.",
     images: "/OpenGraph.jpg",
   },
   alternates: {
