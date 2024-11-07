@@ -36,6 +36,7 @@ Voici un aperçu de la structure des fichiers et dossiers principaux :
 ├── .github
 │   └── workflows           # Configuration pour le déploiement avec GitHub Actions
 └── README.md               # Documentation du projet
+```
 
 ## ⚙️ Installation et exécution du projet
 
