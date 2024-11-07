@@ -2,7 +2,7 @@ const Footer = () => {
     return (
       <footer className="bg-[var(--card)] text-[var(--card-foreground)] py-8 mt-20">
         <div className="container mx-auto text-center">
-          <p className="text-lg mb-4">
+          <p className="text-lg mb-4 lg:p-0 p-4">
             Vous pouvez me contacter à l&apos;adresse suivante: <a href="mailto:tonemail@example.com" className="bg-transparent	text-[var(--accent)] hover:underline">nicolasbernard06600@gmail.com</a>
           </p>
           <div className="flex justify-center space-x-6 mb-4">

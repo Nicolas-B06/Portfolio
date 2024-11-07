@@ -12,10 +12,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[var(--card)] text-[var(--card-foreground)] py-4">
+    <header className="bg-[var(--card)] text-[var(--card-foreground)] py-4 fixed w-screen z-50">
       <nav className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <Link href="/" className="bg-transparent text-[var(--foreground)]">
+          <Link href="/" className="bg-transparent text-[var(--foreground)] lg:pl-0 pl-4 ">
             Nicolas BERNARD
           </Link>
         </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 const Banner: React.FC = () => {
   return (
-    <section className="bg-[var(--background)] text-[var(--foreground)]  mt-20 flex justify-center items-center px-4 sm:px-6 lg:px-8">
+    <section className="bg-[var(--background)] text-[var(--foreground)]  mt-40 flex justify-center items-center px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-12">
         <div className="flex justify-center lg:justify-start">
           <img

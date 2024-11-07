@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-[var(--accent)] text-[var(--accent-foreground)] py-3 rounded font-semibold hover:bg-[var(--primary)] transition-colors duration-200"
+          className="w-full bg-[var(--accent)] text-[var(--accent-foreground)] py-3 rounded font-semibold hover:bg-[var(--primary)] hover:text-[var(--accent)] transition-colors duration-200"
         >
           Envoyer
         </button>
