@@ -46,23 +46,23 @@ Voici un aperçu de la structure des fichiers et dossiers principaux :
 
 ### Étapes d'installation
 1. Clonez ce dépôt sur votre machine locale :
-   
+    ```bash
    git clone https://github.com/Nicolas-B06/mon-portfolio.git
-   
+   ```
 2. Naviguez dans le dossier du projet :
-
+ ```bash   
 cd mon-portfolio
-
+```
 3. Installez les dépendances :
-
+ ```bash
 npm install
-
+```
 4. Créez un fichier .env.local pour vos variables d'environnement et ajoutez-y vos identifiants nécessaires pour Email.js et le déploiement.
    
 5. Démarrez le serveur de développement :
-
+ ```bash
 npm run dev
-
+```
 🚀 Déploiement
 Ce portfolio est configuré pour un déploiement automatique sur Vercel via GitHub Actions. Les commits sur la branche principale déclencheront un déploiement.
 
