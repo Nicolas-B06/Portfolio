@@ -25,7 +25,17 @@ Ce projet a été développé avec les technologies modernes du développement w
 
 Voici un aperçu de la structure des fichiers et dossiers principaux :
 
-├── public │ └── assets ├── src │ ├── components # Composants UI pour les différentes sections du portfolio │ ├── pages # Pages principales du site (Accueil, Contact, etc.) │ ├── styles # Fichiers CSS et configuration Tailwind │ └── utils # Utilitaires et configurations diverses ├── .github │ └── workflows # Configuration pour le déploiement avec GitHub Actions └── README.md
+```plaintext
+├── public
+│   └── assets
+├── src
+│   ├── components          # Composants UI pour les différentes sections du portfolio
+│   ├── pages               # Pages principales du site (Accueil, Contact, etc.)
+│   ├── styles              # Fichiers CSS et configuration Tailwind
+│   └── utils               # Utilitaires et configurations diverses
+├── .github
+│   └── workflows           # Configuration pour le déploiement avec GitHub Actions
+└── README.md               # Documentation du projet
 
 ## ⚙️ Installation et exécution du projet
 
