@@ -7,6 +7,13 @@ import { HoverEffect } from "./ui/card-hover-effect";
 const Projects: React.FC<object> = () => {
   const projects = [
     {
+      title: "PlayFinder (en cour)",
+      image: "/PlayFinder.png",
+      description:
+        "🎮 PlayFinder est une application qui aide les joueurs à choisir un jeu vidéo aléatoirement lorsqu'ils ne savent pas à quoi jouer, en solo ou avec des amis. À terme, elle permettra de créer un compte et de lier son compte Steam. Ce projet me permet de découvrir Vue.js pour le front-end et Java pour le back-end.",
+      link: "https://github.com/Nicolas-B06/Play-Finder",
+    },
+    {
       title: "BodyFit-app",
       image: "/bodyfit.png",
       description:

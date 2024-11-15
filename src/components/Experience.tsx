@@ -11,39 +11,39 @@ const links = [
   {
     title: "React",
     icon: <FaReact className="text-cyan-500" size={25} />,
-    href: "#",
+    href: "#experience",
   },
   {
     title: "React Native",
     icon: <IconBrandReactNative className="text-cyan-500" size={25} />,
-    href: "#",
+    href: "#experience",
   },
   {
     title: "TypeScript",
     icon: <SiTypescript className="text-sky-400" size={25} />,
-    href: "#",
+    href: "#experience",
   },
   {
     title: "JavaScript",
     icon: (
       <IoLogoJavascript className="bg-yellow-300 text-stone-950" size={25} />
     ),
-    href: "#",
+    href: "#experience",
   },
   {
     title: "Angular",
     icon: <FaAngular className="text-red-700" size={25} />,
-    href: "#",
+    href: "#experience",
   },
   {
     title: "NodeJs",
     icon: <FaNodeJs className="text-lime-500" size={25} />,
-    href: "#",
+    href: "#experience",
   },
   {
     title: "Java",
     icon: <FaJava className="text-blue-400" size={25} />,
-    href: "#",
+    href: "#experience",
   },
 ];
 
