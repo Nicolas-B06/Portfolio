@@ -1,6 +1,8 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
 import { IconBrandReactNative } from "@tabler/icons-react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { SiTypescript } from "react-icons/si";
@@ -48,13 +50,15 @@ const links = [
 ];
 
 const Experience: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="experience" className="px-4 sm:px-6 lg:px-8">
       <h2 className="text-white font-semibold text-center text-4xl sm:text-6xl pt-10 sm:pt-[35px] mb-4">
-        EXPERIENCE
+        {t("experienceTitle")}
       </h2>
       <p className="tracking-[0.5em] text-center font-light pb-5 text-[var(--accent)] text-lg sm:text-1xl">
-        ET TECHNOLOGIES CONNUES
+        {t("experienceSubtitle")}
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:hidden gap-4 sm:gap-6 justify-items-center mb-8">
@@ -79,10 +83,9 @@ const Experience: React.FC = () => {
               height={100}
               width={100}
               alt="logo blanc pro btp"
-              
             />
             <p className="text-gray-300 text-center md:text-left">
-              Assistant en <span className="font-semibold">stratégie IT</span>
+              {t("proBtpTitle")}
             </p>
           </div>
           <p className="text-gray-300 text-center md:text-left md:pt-0 pt-3">
@@ -90,13 +93,7 @@ const Experience: React.FC = () => {
           </p>
         </div>
         <p className="text-gray-300 pt-5 text-justify text-sm sm:text-md leading-relaxed">
-          En tant qu&apos;assistant en stratégie IT chez Pro BTP, j&apos;ai
-          contribué à plusieurs initiatives stratégiques, notamment en réalisant
-          la cartographie des compétences et en analysant des sujets tels que
-          l&apos;intelligence artificielle et les architectures event-driven.
-          J&apos;ai également conduit une analyse de l&apos;obsolescence des
-          technologies et animé des ateliers de design thinking, favorisant la
-          collaboration et l&apos;innovation au sein des équipes.
+          {t("proBtpDescription")}
         </p>
       </div>
       <div className="container mx-auto mb-10 max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -106,12 +103,11 @@ const Experience: React.FC = () => {
               src="/NS.jpg"
               height={50}
               width={50}
-              alt="logo blanc nesxtsourcia"
+              alt="logo blanc nextsourcia"
               className="rounded-full"
             />
             <p className="text-gray-300 text-center md:text-left">
-              Développeur web
-              <span className="font-semibold"> Full Stack</span>
+              {t("nextSourciaTitle")}
             </p>
           </div>
           <p className="text-gray-300 text-center md:text-left md:pt-0 pt-3">
@@ -119,23 +115,8 @@ const Experience: React.FC = () => {
           </p>
         </div>
         <p className="text-gray-300 pt-5 text-justify text-sm sm:text-md leading-relaxed">
-          En tant que développeur web Full Stack chez NextSourcia, j&apos;ai
-          travaillé sur la réalisation de thèmes pour le CMS e-commerce de
-          l&apos;entreprise (Aquila CMS) ainsi que sur l&apos;entretien et la
-          mise à jour des thèmes existants. J&apos;ai également participé à la
-          création de preuves de concept (POC) et réalisé un projet interne
-          Front/Back en utilisant une stack technique moderne : React, Node.js,
-          TypeScript et Mongoose. Ce rôle m&apos;a permis de renforcer mes
-          compétences en développement web et de suivre les dernières
-          innovations technologiques.
+          {t("nextSourciaDescription")}
         </p>
-        <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-5">
-          {["React", "TypeScript", "JavaScript", "NodeJs"].map((tech, idx) => (
-            <div key={idx} className="flex items-center">
-              {links.find((link) => link.title === tech)?.icon}
-            </div>
-          ))}
-        </div>
       </div>
       <div className="container mx-auto mb-10 max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="md:flex md:justify-between items-center pt-5">
@@ -148,7 +129,7 @@ const Experience: React.FC = () => {
               className="rounded-full"
             />
             <p className="text-gray-300 text-center md:text-left">
-              Formation <span className="font-semibold">Développeur Web</span> - O'clock
+              {t("oclockTitle")}
             </p>
           </div>
           <p className="text-gray-300 text-center md:text-left md:pt-0 pt-3">
@@ -156,20 +137,8 @@ const Experience: React.FC = () => {
           </p>
         </div>
         <p className="text-gray-300 pt-5 text-justify text-sm sm:text-md leading-relaxed">
-          Formation intensive de 6 mois en développement web full stack, avec une spécialisation backend en Node.js.
-          J'ai obtenu le titre RNCP Niveau 5 de "Développeur Web et Web Mobile" après cette formation.
-          <br /><br />
-          <span className="font-semibold">Projet de fin de formation : Wishlist</span> - Une application permettant de créer et de gérer
-          des listes d’articles provenant de sites marchands. Ce projet a été réalisé en utilisant des technologies comme React, Express (Node.js),
-          et PostgreSQL, déployé sur Heroku et Vercel.
+          {t("oclockDescription")}
         </p>
-        <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-5">
-          {["React", "NodeJs", "JavaScript"].map((tech, idx) => (
-            <div key={idx} className="flex items-center">
-              {links.find((link) => link.title === tech)?.icon}
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

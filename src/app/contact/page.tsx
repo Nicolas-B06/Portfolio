@@ -3,6 +3,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ const Contact: React.FC = () => {
     subject: "",
     message: "",
   });
+
+  const { t } = useLanguage();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -37,12 +40,12 @@ const Contact: React.FC = () => {
       .then(
         (result) => {
           console.log("Message envoyé !", result.text);
-          alert("Votre message a été envoyé avec succès !");
+          alert(t("contactSuccess"));
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
         (error) => {
           console.error("Erreur lors de l'envoi", error.text);
-          alert("Une erreur s'est produite. Veuillez réessayer.");
+          alert(t("contactError"));
         }
       );
   };
@@ -50,11 +53,10 @@ const Contact: React.FC = () => {
   return (
     <section className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col items-center justify-center px-4">
       <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 mt-20">
-        Entrons en Contact
+      {t("contactPageTitle")}
       </h2>
       <p className="text-center text-lg text-gray-300 mb-8">
-        Pour toute question, collaboration ou simplement pour échanger,
-        n&apos;hésitez pas à remplir le formulaire ci-dessous !
+      {t("contactPageSubtitle")}
       </p>
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full max-w-6xl space-y-8 lg:space-y-0 lg:space-x-12">
         <form
@@ -63,7 +65,7 @@ const Contact: React.FC = () => {
         >
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium mb-2">
-              Nom
+            {t("formName")}
             </label>
             <input
               type="text"
@@ -77,7 +79,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium mb-2">
-              Email
+            {t("formEmail")}
             </label>
             <input
               type="email"
@@ -91,7 +93,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="subject" className="block text-sm font-medium mb-2">
-              Sujet
+            {t("formSubject")}
             </label>
             <input
               type="text"
@@ -104,7 +106,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="mb-6">
             <label htmlFor="message" className="block text-sm font-medium mb-2">
-              Message
+            {t("formMessage")}
             </label>
             <textarea
               id="message"
@@ -120,11 +122,11 @@ const Contact: React.FC = () => {
             type="submit"
             className="w-full bg-[var(--accent)] text-[var(--accent-foreground)] py-3 rounded font-semibold hover:bg-[var(--primary)] hover:text-[var(--accent)] transition-colors duration-200"
           >
-            Envoyer
+            {t("formSubmit")}
           </button>
         </form>
         <div className="w-full lg:w-1/3 flex flex-col items-start space-y-6 p-8 bg-[var(--card)] rounded-lg shadow-lg self-start">
-          <h3 className="text-2xl font-semibold mb-4">Infos de Contact :</h3>
+          <h3 className="text-2xl font-semibold mb-4">{t("contactInfoTitle")}</h3>
           <div className="flex items-center space-x-3">
             <FaEnvelope className="text-[var(--accent)] text-xl" />
             <a
