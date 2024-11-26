@@ -32,7 +32,7 @@ const Banner: React.FC = () => {
               {t("contactMe")}
             </a>
             <a
-              href="/cv_bernard_nicolas_2024_compressed.pdf"
+              href="/cv_bernard_nicolas_2024.pdf"
               download
               className="hover:bg-[var(--accent)] bg-transparent rounded-3xl text-white font-semibold hover:text-black py-3 px-8 sm:px-10 border border-white hover:border-transparent"
             >
